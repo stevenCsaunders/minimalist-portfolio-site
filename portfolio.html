@@ -1,54 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | My Projects</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Portfolio Projects</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/reset.css">
 </head>
+
 <body>
-
-  Home
-  Portfolio
-  Contact Me
-
-  Manage
-
-  This project required me to build a fully responsive landing page to the designs provided. 
-  I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, 
-  such as the testimonial slider.
-
-  View Project
-
-  Bookmark
-
-  This project required me to build a fully responsive landing page to the designs provided. I 
-  used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such 
-  as the features section.
-
-  View Project
-
-  Insure
-
-  This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive 
-  landing page. The only JavaScript this project required was to enable the toggling of the 
-  mobile navigation.
-
-  View Project
-
-  Fylo
-
-  This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and 
-  built it so that it was fully-responsive. I took a mobile-first approach and used modern 
-  CSS like Flexbox and Grid for layout purposes.
-
-  View Project
-
-  Interested in doing a project together?
-
-  Contact Me
-
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <nav>
+    <img src="/images/logo.svg" alt="navigation logo" />
+    <ul>
+      <li>Home</li>
+      <li class="top-nav-active">Portfolio</li>
+      <li>Contact Me</li>
+    </ul>
+  </nav>
+  <main>
+    <aricle>
+      <section>
+        <img src="/images/portfolio/desktop/image-portfolio-manage.jpg" alt="manage preview" />
+        <div>
+          <h3>Manage</h3>
+          <p>This project required me to build a fully responsive landing page to the designs provided.
+            I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity,
+            such as the testimonial slider.</p>
+          <button>
+            View Project
+          </button>
+        </div>
+      </section>
+      <section>
+        <img src="/images/portfolio/desktop/image-portfolio-bookmark.jpg" alt="bookmark preview" />
+        <div>
+          <h3>Bookmark</h3>
+          <p>This project required me to build a fully responsive landing page to the designs provided.
+            I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity,
+            such as the testimonial slider.</p>
+          <button>
+            View Project
+          </button>
+        </div>
+      </section>
+      <section>
+        <img src="/images/portfolio/desktop/image-portfolio-insure.jpg" alt="insure preview" />
+        <div>
+          <h3>Insure</h3>
+          <p>This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive
+            landing page. The only JavaScript this project required was to enable the toggling of the
+            mobile navigation..</p>
+          <button>
+            View Project
+          </button>
+        </div>
+      </section>
+      <section>
+        <img src="/images/portfolio/desktop/image-portfolio-fylo.jpg" alt="fylo preview" />
+        <div>
+          <h3>Fylo</h3>
+          <p>This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and
+            built it so that it was fully-responsive. I took a mobile-first approach and used modern
+            CSS like Flexbox and Grid for layout purposes.
+          </p>
+          <button>
+            View Project
+          </button>
+        </div>
+      </section>
+    </article>
+    <section>
+      <h3>Interested in doing a project together?</h3>
+      <button>Contact Me</button>
+    </section>
+  </main>
+  <footer>
+    <nav>
+      <img src="images/logo.svg" alt="footer logo" />
+      <div>
+        <ul>
+          <li>Home</li>
+          <li>Portfolio</li>
+          <li>Contact Me</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li><img src="images/icons/github.svg" /></li>
+          <li class="btm-nav-active"><img src="images/icons/twitter.svg" /></li>
+          <li><img src="images/icons/linkedin.svg" /></li>
+        </ul>
+      </div>
+    </nav>
+  </footer>
+  <script src="" async defer></script>
 </body>
+
 </html>
