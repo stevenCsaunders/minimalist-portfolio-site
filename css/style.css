@@ -25,6 +25,9 @@
 }
 
 /* typography developed using type-scale.com */
+* {
+	box-sizing: border-box;
+}
 html {
 	font-size: 100%; /*16px*/
 }
@@ -38,14 +41,19 @@ body {
 }
 
 p {
-	margin-bottom: 1.15rem;
+    margin-bottom: 1.15rem;
+    max-width: 50em;
+}
+
+p a {
+    color: var(--darkBlue);
+    text-decoration: none;
+    border-bottom: solid 2px var(--cyan);
 }
 
 h1,
 h2,
-h3,
-h4,
-h5 {
+h3 {
 	margin: 2.75rem 0 1.05rem;
 	font-family: var(--headingFont);
 	font-weight: 400;
@@ -67,15 +75,68 @@ h3 {
 	font-size: var(--h3);
 }
 
-h4 {
-	font-size: var(--h4);
-}
-
-h5 {
-	font-size: var(--h5);
-}
-
 small,
 .text_small {
 	font-size: var(--textSmall);
 }
+
+label {
+    display: block;
+    font-size: var(--textSmall);
+    font-weight: 700;
+}
+
+input, textarea {
+    background: var(--grey);
+    border: none;
+	padding: 20px;
+}
+
+input:focus, textarea:focus {
+	outline: 1px solid var(--cyan)
+}
+
+::placeholder {
+	color: var(--darkBlue);
+	opacity: .3;
+}
+
+/* secondary button styles */
+.secondary-btn {
+	appearance: none;
+	background: var(--lightGrey);
+	border: var(--darkBlue) 1px solid;
+	color: var(--darkBlue);
+	padding: 20px 40px;
+	text-transform: uppercase;
+	transition: background .3s ease;
+}
+
+.secondary-btn:hover {
+	background: var(--darkBlue);
+	color: var(--lightGrey);
+	cursor: pointer;
+}
+
+.secondary-btn:disabled, .secondary-btn[disabled] {
+	opacity: .3;
+}
+
+/* primary button styles */
+.primary-btn {
+	background: var(--blue);
+	opacity: .90;
+	color: var(--lightGrey);
+	font-size: var(--textSmall);
+	text-transform: uppercase;
+	border: none;
+	padding: 2em;
+}
+.primary-btn svg {
+	background: var(--blue);
+	opacity: 1;
+}
+
+
+
+

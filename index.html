@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Minimalist Portfolio Site</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,7 +18,8 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;1,700&family=Public+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;1,700&family=Public+Sans:wght@400;700&display=swap">
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -30,9 +31,9 @@
   <nav>
     <img src="/images/logo.svg" />
     <ul>
-      <li class="top-nav-active">Home</li>
-      <li>Portfolio</li>
-      <li>Contact Me</li>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/portfolio.html">Portfolio</a></li>
+      <li><a href="/contact.html">Contact Me</a></li>
     </ul>
   </nav>
   <main>
@@ -41,33 +42,36 @@
       <h1>
         Hey, I’m Steve Saunders and I love building beautiful websites
       </h1>
-      <button>About Me</button>
+      <a class="primary-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14"><g fill="none" fill-rule="evenodd" stroke="#5FB4A2"><path d="M0 9l8 4 8-4"/><path opacity=".5" d="M0 5l8 4 8-4"/><path opacity=".25" d="M0 1l8 4 8-4"/></g></svg>
+        <span>About Me</span>
+      </a>
     </header>
     <article>
       <secton>
         <img src="/images/homepage/desktop/image-homepage-profile.jpg" />
         <div>
+          <a id="about"></a>
           <h2>
             About Me
           </h2>
           <p>
             I’m a junior front-end developer looking for a new role in an exciting company. I focus on writing
-            accessible
-            HTML, using modern CSS practices and writing clean JavaScript. When writing JavaScript code, I mostly use
-            React, but I can adapt to
-            whatever tools are required. I’m based in Syracuse, UT, but I’m happy working remotely and have experience
-            in
-            remote teams. When I’m not coding, you’ll find me outdoors shredding the gnar or
+            accessible and semantic HTML, using modern CSS practices and writing clean JavaScript. When writing
+            JavaScript code,
+            I mostly use React, but I can adapt to whatever tools are required. I’m based in Syracuse, UT, but I’m happy
+            working remotely and have experience
+            in remote teams. When I’m not coding, you’ll find me outdoors shredding the gnar or
             looking for butter on the lake. I love being out in nature whether that’s going for a walk, run or cycling.
             I’d love you to check out my work.
           </p>
-          <button>Go to Portfolio</button>
+          <button class="secondary-btn">Go to Portfolio</button>
         </div>
       </secton>
     </article>
     <section>
       <h3>Interested in doing a project together?</h3>
-      <button>Contact Me</button>
+      <button class="secondary-btn">Contact Me</button>
     </section>
   </main>
   <footer>
@@ -93,4 +97,5 @@
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+
 </html>
