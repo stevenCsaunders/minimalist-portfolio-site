@@ -5,7 +5,8 @@
 	--darkBlue: #33323d;
 	--lightGrey: #fafafa;
 	--grey: #eaeaeb;
-	--reda: #f43030;
+	--red: #f43030;
+	--black: #000000;
 
 	/* color intentions */
 	--background: var(--lightGrey);
@@ -41,14 +42,14 @@ body {
 }
 
 p {
-    margin-bottom: 1.15rem;
-    max-width: 50em;
+	margin-bottom: 1.15rem;
+	max-width: 50em;
 }
 
 p a {
-    color: var(--darkBlue);
-    text-decoration: none;
-    border-bottom: solid 2px var(--cyan);
+	color: var(--darkBlue);
+	text-decoration: none;
+	border-bottom: solid 2px var(--cyan);
 }
 
 h1,
@@ -81,24 +82,77 @@ small,
 }
 
 label {
-    display: block;
-    font-size: var(--textSmall);
-    font-weight: 700;
+	display: block;
+	font-size: var(--textSmall);
+	font-weight: 700;
 }
 
-input, textarea {
-    background: var(--grey);
-    border: none;
+input,
+textarea {
+	background: var(--grey);
+	border: none;
 	padding: 20px;
 }
 
-input:focus, textarea:focus {
-	outline: 1px solid var(--cyan)
+input:focus,
+textarea:focus {
+	outline: 1px solid var(--cyan);
 }
 
 ::placeholder {
 	color: var(--darkBlue);
-	opacity: .3;
+	opacity: 0.3;
+}
+
+/* primary button styles */
+.primary-btn {
+	color: var(--lightGrey);
+	background: var(--blue);
+	text-transform: uppercase;
+	font-size: var(--textSmall);
+	border: none;
+	z-index: 1;
+	position: relative;
+	width: 53%;
+	height: 4em;
+	display: grid;
+	grid-template-columns: 25% auto;
+	align-items: center;
+	justify-items: center;
+}
+
+.primary-btn::before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 25%;
+	height: 100%;
+	background: var(--black);
+	opacity: 0.2;
+}
+
+.primary-btn:hover,
+.primary-btn:hover svg g {
+	background: var(--cyan);
+	color: var(--lightGrey);
+	cursor: pointer;
+	stroke: var(--lightGrey);
+}
+
+/* disables primary button styles */
+.primary-btn:disabled,
+.primary-btn:disabled svg g {
+	background: var(--grey);
+	stroke: white;
+	cursor: auto;
+	color: white;
+}
+
+.primary-btn:disabled::before {
+	background: var(--black);
+	opacity: 0.1;
 }
 
 /* secondary button styles */
@@ -109,7 +163,7 @@ input:focus, textarea:focus {
 	color: var(--darkBlue);
 	padding: 20px 40px;
 	text-transform: uppercase;
-	transition: background .3s ease;
+	transition: background 0.3s ease;
 }
 
 .secondary-btn:hover {
@@ -118,25 +172,7 @@ input:focus, textarea:focus {
 	cursor: pointer;
 }
 
-.secondary-btn:disabled, .secondary-btn[disabled] {
-	opacity: .3;
+.secondary-btn:disabled,
+.secondary-btn[disabled] {
+	opacity: 0.3;
 }
-
-/* primary button styles */
-.primary-btn {
-	background: var(--blue);
-	opacity: .90;
-	color: var(--lightGrey);
-	font-size: var(--textSmall);
-	text-transform: uppercase;
-	border: none;
-	padding: 2em;
-}
-.primary-btn svg {
-	background: var(--blue);
-	opacity: 1;
-}
-
-
-
-
