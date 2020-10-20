@@ -8,6 +8,11 @@
 	--red: #f43030;
 	--black: #000000;
 
+	/* positioning*/
+	--containerPadding: 10%;
+	--headerHeight: 3em;
+
+
 	/* color intentions */
 	--background: var(--lightGrey);
 	--buttonBackground: var(--blue);
@@ -17,20 +22,24 @@
 	--mutedText: var(--lightGrey);
 	--headingFont: 'Ibarra Real Nova', serif;
 	--bodyFont: 'Public Sans', sans-serif;
+	--baseFontSize: 100%;
 	--h1: 3.125em;
 	--h2: 2.5em;
 	--h3: 2em;
 	--h5: 1.5em;
 	--h5: 1.25em;
 	--textSmall: 0.8em;
-}
+} /* typography developed using type-scale.com */
 
-/* typography developed using type-scale.com */
-* {
-	box-sizing: border-box;
+/*BEGIN BASE STYLES*/
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
 }
 html {
-	font-size: 100%; /*16px*/
+	font-size: var(--baseFontSize); /*16px*/
+	box-sizing: border-box;
 }
 
 body {
@@ -39,6 +48,46 @@ body {
 	font-weight: 400;
 	line-height: 1.875;
 	color: #333;
+}
+
+header {
+	--headerBackground: var(--lightGrey);
+	background: var(--headerBackground);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 var(--containerPadding);
+	height: var(--headerHeight);
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+header nav a {
+	text-decoration: none;
+}
+
+
+footer {
+	background: var(--darkBlue);
+	color: var(--lightGrey);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+footer nav a {
+	display: flex;
+	justify-content: center;
+}
+
+footer .social a + a{
+	margin-left: .5em;
+}
+
+.social a svg path {
+	fill: var(--lightGrey);
 }
 
 p {
@@ -103,6 +152,7 @@ textarea:focus {
 	color: var(--darkBlue);
 	opacity: 0.3;
 }
+
 
 /* primary button styles */
 .primary-btn {
@@ -175,4 +225,33 @@ textarea:focus {
 .secondary-btn:disabled,
 .secondary-btn[disabled] {
 	opacity: 0.3;
+}
+
+/* general page layout */
+
+.layout {
+	margin: 0 auto;
+	max-width: 80%;
+	padding: calc(3em + var(--headerHeight)) var(--containerPadding);
+}
+
+/* MOBILE FIRST STYLES */
+
+/* media queries */
+@media only screen and (min-width: 500px) {
+	:root {
+		--baseFontSize: 110%;
+	}
+
+	.grid {
+		--gridCols: 2;
+		display: grid;
+		grid-template-columns: 35% 65%;
+	}
+
+	.flex {
+		--justifyContent: space-between;
+		display: flex;
+		justify-content: var(--justifyContent);
+	}
 }
