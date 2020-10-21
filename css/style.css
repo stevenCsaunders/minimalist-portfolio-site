@@ -75,18 +75,20 @@ footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 }
 
 footer nav a {
 	display: flex;
-	justify-content: center;
 }
 
-footer .social a + a{
-	margin-left: .5em;
+footer .social-nav 
+{
+	display: flex;
+
 }
 
-.social a svg path {
+.social-nav a svg path, footer nav svg path{
 	fill: var(--lightGrey);
 }
 
@@ -191,7 +193,7 @@ textarea:focus {
 	stroke: var(--lightGrey);
 }
 
-/* disables primary button styles */
+/* disabled primary button styles */
 .primary-btn:disabled,
 .primary-btn:disabled svg g {
 	background: var(--grey);
@@ -227,31 +229,36 @@ textarea:focus {
 	opacity: 0.3;
 }
 
-/* general page layout */
+/* 
+///////////////////
+MOBILE FIRST STYLES 
+*/
+nav a{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 
-.layout {
-	margin: 0 auto;
-	max-width: 80%;
+main {
 	padding: calc(3em + var(--headerHeight)) var(--containerPadding);
 }
 
-/* MOBILE FIRST STYLES */
+main img {
+	width: 100%;
+}
+
+
+  
+
+
+
 
 /* media queries */
-@media only screen and (min-width: 500px) {
-	:root {
-		--baseFontSize: 110%;
-	}
+@media only screen and (min-width: 768px) {
+	.toggle-button {
+display: none;	}
 
-	.grid {
-		--gridCols: 2;
-		display: grid;
-		grid-template-columns: 35% 65%;
-	}
-
-	.flex {
-		--justifyContent: space-between;
-		display: flex;
-		justify-content: var(--justifyContent);
-	}
+	.main-menu {
+display: block	}
 }
