@@ -1,10 +1,14 @@
-const toggleButton = document.querySelector('.top-nav button');
-const menu = document.querySelector('.top-nav .main-menu');
+const open = document.querySelector('.top-nav #open');
+const menu = document.querySelector('.top-nav ul');
+const close = document.querySelector('.top-nav #close')
 
-toggleButton.addEventListener('click', function(){
-    const toggleMenu = JSON.parse(toggleButton.getAttribute('aria-expanded'));
-    toggleButton.setAttribute('aria-expanded', !toggleMenu);
-    menu.hidden = !menu.hidden;
-});
+const toggleHamburger = () => {
+    open.classList.toggle('hide');
+    close.classList.toggle('hide');
+    menu.classList.toggle('show');
+}
 
-console.log();
+open.addEventListener('click', toggleHamburger);
+close.addEventListener('click', toggleHamburger);
+
+
