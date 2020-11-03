@@ -147,7 +147,7 @@ button {
 	background: var(--blue);
 	z-index: 1;
 	position: relative;
-	width: 65%;
+	width: 15.5em;
 	height: 4em;
 	display: grid;
 	grid-template-columns: 25% auto;
@@ -308,7 +308,7 @@ main article .about-section .about-content {
 ///////////////////
 MOBILE FIRST STYLES 
 */
-@media (max-width: 48em) {
+@media (max-width: 768px) {
 	.topnav {
 		padding: 2em;
 	}
