@@ -30,7 +30,7 @@
 	--textSmall: 0.75em;
 } /* typography developed using type-scale.com */
 
-/*BEGIN BASE STYLES*/
+/*BEGIN GLOBAL STYLES*/
 *,
 *::before,
 *::after {
@@ -59,6 +59,8 @@ header {
 	left: 0;
 	top: 0;
 	width: 100%;
+	display: flex;
+  flex-;
 }
 
 footer {
@@ -147,11 +149,13 @@ button {
 	background: var(--blue);
 	z-index: 1;
 	position: relative;
-	width: 15.5em;
+	width: 50%;
+	max-width: 20em;
 	height: 4em;
 	display: grid;
 	grid-template-columns: 25% auto;
 	align-items: center;
+	padding: 0;
 }
 
 .primary-btn::before {
@@ -160,7 +164,7 @@ button {
 	z-index: -1;
 	top: 0;
 	left: 0;
-	width: 30%;
+	width: 25%;
 	height: 100%;
 	background: var(--black);
 	opacity: 0.2;
@@ -209,9 +213,8 @@ button {
 }
 
 /* Nav styles */
-
-header nav {
-	margin: 1em 0;
+nav {
+	border: 1px solid blue;
 }
 
 nav ul {
@@ -292,7 +295,10 @@ footer nav svg path {
 	fill: var(--lightGrey);
 }
 
-/* Global Styles */
+main {
+	padding: calc(1em + var(--headerHeight)) var(--containerPadding);
+}
+
 main .hero,
 main article {
 	margin-bottom: 6.25em;
@@ -338,10 +344,6 @@ MOBILE FIRST STYLES
 		display: none;
 	}
 
-	main {
-		padding: calc(1em + var(--headerHeight)) var(--containerPadding);
-	}
-
 	main img {
 		width: 100%;
 	}
@@ -384,7 +386,11 @@ MOBILE FIRST STYLES
 ///////////////////
 DESKTOP STYLES 
 */
-@media (min-width: 48em) {
+@media (min-width: 768px) {
+	header{
+		--headerHeight: 5em;
+	}
+
 	.top-nav button {
 		display: none;
 	}
@@ -406,8 +412,18 @@ DESKTOP STYLES
 		color: var(--darkBlue);
 	}
 
+	.top-nav ul li a:hover {
+		color: var(--cyan);
+	}
+
 	.top-nav ul li a::after {
 		content: '';
 		background-color: var(--cyan);
+	}
+
+	main .hero {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 }
