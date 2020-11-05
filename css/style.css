@@ -31,6 +31,7 @@
 } /* typography developed using type-scale.com */
 
 /*BEGIN GLOBAL STYLES*/
+
 *,
 *::before,
 *::after {
@@ -52,15 +53,13 @@ body {
 header {
 	--headerBackground: var(--lightGrey);
 	background: var(--headerBackground);
-	padding: 0 var(--containerPadding);
+	padding: 1.5em var(--containerPadding);
 	height: var(--headerHeight);
 	position: fixed;
 	z-index: 10;
 	left: 0;
 	top: 0;
 	width: 100%;
-	display: flex;
-  flex-;
 }
 
 footer {
@@ -213,10 +212,6 @@ button {
 }
 
 /* Nav styles */
-nav {
-	border: 1px solid blue;
-}
-
 nav ul {
 	padding: 0;
 	margin: 0;
@@ -299,6 +294,10 @@ main {
 	padding: calc(1em + var(--headerHeight)) var(--containerPadding);
 }
 
+main .hero-header h1 {
+	margin-bottom: 1em;
+}
+
 main .hero,
 main article {
 	margin-bottom: 6.25em;
@@ -355,7 +354,6 @@ MOBILE FIRST STYLES
 	main h1 {
 		--h1: 2.5em;
 		font-size: var(--h1);
-		margin-bottom: 1em;
 	}
 
 	main .about-section img {
@@ -381,6 +379,12 @@ MOBILE FIRST STYLES
 		margin-top: 1em;
 	}
 }
+
+/* 
+///////////////////
+TABLET STYLES 
+*/
+
 
 /* 
 ///////////////////
@@ -423,7 +427,17 @@ DESKTOP STYLES
 
 	main .hero {
 		display: flex;
-		flex-wrap: wrap;
 		justify-content: center;
+		flex-direction: column;
+		position: relative;
+	}
+
+	main .hero-header {
+		position: absolute;
+		padding: 2em;
+		background-color: var(--lightGrey);
+		bottom: 0;
+		left: 0;
+		width: 40%;
 	}
 }
