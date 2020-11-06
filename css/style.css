@@ -385,13 +385,12 @@ MOBILE FIRST STYLES
 TABLET STYLES 
 */
 
-
 /* 
 ///////////////////
 DESKTOP STYLES 
 */
 @media (min-width: 768px) {
-	header{
+	header {
 		--headerHeight: 5em;
 	}
 
@@ -439,5 +438,41 @@ DESKTOP STYLES
 		bottom: 0;
 		left: 0;
 		width: 40%;
+	}
+
+	article section.about-section {
+		display: flex;
+	}
+	article section.about-section img {
+		display: flex;
+		width: 100%;
+		height: auto;
+		flex: 1;
+	}
+	article section.about-section .about-content {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		margin: 0 4em;
+	}
+
+	section.work-together {
+		display: flex;
+		align-items: center;
+	}
+
+	.work-together h3 {
+		display: flex;
+		flex: 3;
+	}
+
+	.work-together hr {
+		display: flex;
+		flex: 4;
+		margin: 0 3em;
+	}
+
+	.work-together button {
+		flex: 1;
 	}
 }
