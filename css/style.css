@@ -241,12 +241,14 @@ nav a {
 	outline: none;
 }
 
-.top-nav ul li a, footer nav ul li a {
+.top-nav ul li a,
+footer nav ul li a {
 	color: var(--lightGrey);
 	position: relative;
 }
 
-.top-nav ul li a::after, footer nav ul li a::after {
+.top-nav ul li a::after,
+footer nav ul li a::after {
 	content: '';
 	background-color: var(--lightGrey);
 	position: absolute;
@@ -257,7 +259,8 @@ nav a {
 	opacity: 0;
 	transition: all 0.3s ease;
 }
-.top-nav ul li a:hover::after, footer nav ul li a:hover::after {
+.top-nav ul li a:hover::after,
+footer nav ul li a:hover::after {
 	transform: translateY(-1.5em);
 	opacity: 1;
 }
@@ -267,7 +270,7 @@ footer nav {
 	align-items: center;
 	justify-content: center;
 }
- 
+
 footer nav ul a {
 	color: var(--lightGrey);
 }
@@ -305,6 +308,11 @@ main article {
 
 main article .about-section .about-content {
 	padding: 2em 0 4em 0;
+	border-top: solid 1px var(--grey);
+	border-bottom: solid 1px var(--grey);
+}
+
+main article .portfolio-item .portfolio-item-content {
 	border-top: solid 1px var(--grey);
 	border-bottom: solid 1px var(--grey);
 }
@@ -360,11 +368,28 @@ MOBILE SPECIFIC STYLES
 		margin-bottom: 2em;
 	}
 
+	main article .portfolio-item img {
+		margin-bottom: 2em;
+	}
+
+	main article .portfolio-item .portfolio-item-content {
+		padding: 2em 0;
+		margin-bottom: 2em;
+	}
+
+	.portfolio-item-content p {
+		margin-bottom: 2em;
+	}
+
 	.work-together {
 		text-align: center;
 	}
 	.work-together h3 {
 		margin-bottom: 1em;
+	}
+
+	.work-together hr {
+		display: none;
 	}
 
 	footer {
@@ -451,19 +476,20 @@ DESKTOP STYLES
 	article section.about-section {
 		display: flex;
 		margin-bottom: 8em;
-
 	}
 	article section.about-section img {
 		display: flex;
-		width: 100%;
-		height: auto;
 		flex: 1;
 	}
 	article section.about-section .about-content {
 		display: flex;
 		flex-direction: column;
 		flex: 1;
-		margin: 0 4em;
+		margin: 0 5em;
+	}
+
+	.about-content button {
+		width: 50%;
 	}
 
 	section.work-together {
@@ -499,7 +525,7 @@ DESKTOP STYLES
 		justify-content: center;
 	}
 
-	footer nav svg{
+	footer nav svg {
 		margin-right: 2em;
 	}
 
@@ -514,5 +540,45 @@ DESKTOP STYLES
 	footer .social-nav {
 		align-items: center;
 		justify-content: center;
+	}
+
+	/* Portfolio Specific Styles */
+
+	main .portfolio {
+		margin-top: 4em;
+	}
+
+	.portfolio-item {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 4em;
+	}
+
+	.portfolio-item .portfolio-content-wrapper {
+		display: flex;
+		justify-content: center;
+		flex: 1;
+	}
+
+	.portfolio-item img {
+		display: flex;
+		align-self: center;
+		flex: 1;
+	}
+
+	.portfolio-item-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 2em 0;
+		width: 60%;
+	}
+
+	.portfolio-item-content button.secondary-btn {
+		width: 60%;
+	}
+
+	.portfolio section:nth-child(even) {
+		flex-direction: row-reverse;
 	}
 }
