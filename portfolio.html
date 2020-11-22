@@ -62,7 +62,11 @@
   <main>
     <article class="portfolio">
       <section class="portfolio-item">
-        <img src="/images/portfolio/desktop/image-portfolio-manage.jpg" alt="manage preview" />
+        <picture class="portfolio-img">
+          <source media="(max-width: 767px)" srcset="images/portfolio/mobile/image-portfolio-manage.jpg 1x, images/portfolio/mobile/image-portfolio-manage@2x.jpg 2x" />
+          <source media="(max-width: 1024px)" srcset="images/portfolio/tablet/image-portfolio-manage.jpg 1x, images/portfolio/tablet/image-portfolio-manage@2x.jpg 2x" />
+          <img src="/images/portfolio/desktop/image-portfolio-manage.jpg" alt="manage preview" />
+        </picture>
         <div class="portfolio-content-wrapper">
           <div class="portfolio-item-content">
             <h3>Manage</h3>
@@ -76,7 +80,11 @@
         </div>
       </section>
       <section class="portfolio-item">
-        <img src="/images/portfolio/desktop/image-portfolio-bookmark.jpg" alt="bookmark preview" />
+        <picture class="portfolio-img">
+          <source media="(max-width: 767px)" srcset="images/portfolio/mobile/image-portfolio-bookmark.jpg 1x, images/portfolio/mobile/image-portfolio-bookmark@2x.jpg 2x" />
+          <source media="(max-width: 1024px)" srcset="images/portfolio/tablet/image-portfolio-bookmark.jpg 1x, images/portfolio/tablet/image-portfolio-bookmark@2x.jpg 2x" />
+        <img src="images/portfolio/desktop/image-portfolio-bookmark.jpg" alt="bookmark preview" />
+        </picture>
         <div class="portfolio-content-wrapper">
           <div class="portfolio-item-content">
             <h3>Bookmark</h3>
@@ -90,7 +98,11 @@
         </div>
       </section>
       <section class="portfolio-item">
-        <img src="/images/portfolio/desktop/image-portfolio-insure.jpg" alt="insure preview" />
+        <picture class="portfolio-img">
+          <source media="(max-width: 767px)" srcset="images/portfolio/mobile/image-portfolio-insure.jpg 1x, images/portfolio/mobile/image-portfolio-insure@2x.jpg 2x" />
+          <source media="(max-width: 1024px)" srcset="images/portfolio/tablet/image-portfolio-insure.jpg 1x, images/portfolio/tablet/image-portfolio-insure@2x.jpg 2x" />
+        <img src="images/portfolio/desktop/image-portfolio-insure.jpg" alt="insure preview" />
+        </picture>
         <div class="portfolio-content-wrapper">
           <div class="portfolio-item-content">
             <h3>Insure</h3>
@@ -104,7 +116,11 @@
         </div>
       </section>
       <section class="portfolio-item">
-        <img src="/images/portfolio/desktop/image-portfolio-fylo.jpg" alt="fylo preview" />
+        <picture class="portfolio-img">
+          <source media="(max-width: 767px)" srcset="images/portfolio/mobile/image-portfolio-fylo.jpg 1x, images/portfolio/mobile/image-portfolio-fylo@2x.jpg 2x" />
+          <source media="(max-width: 1024px)" srcset="images/portfolio/tablet/image-portfolio-fylo.jpg 1x, images/portfolio/tablet/image-portfolio-fylo@2x.jpg 2x" />
+          <img src="images/portfolio/desktop/image-portfolio-fylo.jpg" alt="fylo preview" />
+        </picture>
         <div class="portfolio-content-wrapper">
           <div class="portfolio-item-content">
             <h3>Fylo</h3>
@@ -120,9 +136,9 @@
       </section>
     </article>
     <section class="work-together">
-      <h3>Interested in doing a project together?</h3>
-      <hr>
-      <button class="secondary-btn">Contact Me</button>
+      <h2>Interested in doing a project together?</h2>
+      <span class="horizontal-line"></span>
+      <button class="secondary-btn" onclick="location.href='/contact.html'" type="button">Contact Me</button>
     </section>
   </main>
   <footer>
