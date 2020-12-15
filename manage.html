@@ -62,8 +62,12 @@
 			</ul>
 		</nav>
 	</header>
-	<main class="manifest">
-		<img class="project-hero" src="/images/detail/desktop/image-manage-hero.jpg" alt="manage hero image" />
+	<main class="main">
+		<picture>
+			<source media="(max-width: 767px)" srcset="images/homepage/mobile/image-manage-hero.jpg 1x, images/homepage/mobile/image-manage-hero@2x.jpg 2x"/>
+			<source media="(max-width: 1024px)" srcset="images/homepage/tablet/image-manage-hero.jpg 1x, images/homepage/tablet/image-manage-hero@2x.jpg 2x" />
+			<img src="/images/detail/desktop/image-manage-hero.jpg" alt="manage hero" />
+		</picture>
 		<article>
 			<aside>
 				<h3>Manage</h3>
