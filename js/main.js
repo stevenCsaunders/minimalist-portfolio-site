@@ -1,6 +1,6 @@
 const open = document.querySelector('.top-nav #open');
-const menu = document.querySelector('.top-nav ul');
 const close = document.querySelector('.top-nav #close')
+const menu = document.querySelector('.top-nav ul');
 
 const toggleHamburger = () => {
     open.classList.toggle('hide');
