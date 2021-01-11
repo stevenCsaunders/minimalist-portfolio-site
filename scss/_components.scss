@@ -71,10 +71,14 @@
 }
 
 .about-content-wrapper,
-.portfolio-content-wrapper,
-.detail-content-wrapper {
+.portfolio-content-wrapper {
 	border-top: solid 1px var(--grey);
 	border-bottom: solid 1px var(--grey);
+}
+
+.about-content-wrapper,
+.portfolio-content-wrapper,
+.detail-content-wrapper {
 	display: grid;
 	align-items: center;
 	margin-bottom: 4em;
@@ -97,18 +101,72 @@
 	margin-bottom: 4em;
 }
 
-.detail-item-content .detail-category {
-	color: var(--cyan);
-	font-weight: 700;
-	font-size: 0.85em;
-	line-height: 1;
-	:first-child {
-		margin-bottom: 0;
+.detail-aside {
+	border-top: solid 1px var(--grey);
+	border-bottom: solid 1px var(--grey);
+	margin-bottom: 4em;
+}
+
+.detail-item-content {
+	.blurb {
+		margin: 1.5em 0
+	}
+	.detail-category {
+		p {
+			color: var(--cyan);
+			font-weight: 700;
+			font-size: 0.85em;
+			line-height: 2;
+			margin-bottom: 1.5em;
+		}
+		line-height: 1;
+		:first-child {
+			margin-bottom: 0;
+		}
 	}
 }
 
 .detail-background {
 	margin-bottom: 4em;
+}
+
+.detail-preview {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	img {
+		width: 100%;
+	}
+}
+
+.ad-projects {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: space-between;
+	border-top: 1px solid var(--grey);
+	border-bottom: 1px solid var(--grey);
+	margin-bottom: 6em;
+	.prev-project, .next-project {
+		padding: 1em 0;
+		img {
+			margin-bottom: .75em;
+		}
+		h3 {
+			margin: 0;
+			padding: 0;
+		}
+		p {
+			font-size: 1em;
+			margin: 0;
+			padding: 0;
+		}
+	}
+	.prev-project {
+		border-right: 1px solid var(--grey);
+	}
+	.next-project {
+		text-align: right;
+	}
 }
 
 .work-together {
@@ -318,6 +376,30 @@ footer nav svg path {
 		}
 	}
 
+	.detail-content-wrapper {
+		border: none;
+	}
+
+	.detail-item-content {
+		display: grid;
+		grid: repeat(2, auto) / repeat(2, auto);
+		align-items: start;
+		grid-column-gap: 4em;
+		grid-row-gap: 1.5em;
+		.detail-category {
+			grid-row: 2 / 3;
+		}
+		p {
+			margin: 0;
+			grid-column-start: 2;
+			grid-row: span 4;
+		}
+		button {
+			grid-column: 1 / 2;
+			width: 80%;
+		}
+	}
+
 	.work-together {
 		display: grid;
 		grid-template-columns: 1fr 1.25fr auto;
@@ -353,6 +435,25 @@ footer nav svg path {
 		}
 		.portfolio-content-wrapper {
 			margin: 0 4em;
+		}
+	}
+
+.detail {
+	margin-bottom: 4em;
+}
+
+.detail-content-wrapper {
+	display: grid;
+	grid-template-columns: .75fr 1.25fr;
+	align-items: start;
+	gap: 10em;
+	margin-bottom: 6em;
+}
+
+	.detail-item-content {
+		display: block;
+		button {
+			width: 60%;
 		}
 	}
 
