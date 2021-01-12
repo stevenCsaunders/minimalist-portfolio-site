@@ -82,6 +82,11 @@ main {
     font-size: var(--textSmall);
   }
 
+  a {
+    color: var(--darkBlue);
+    text-decoration: none;
+  }
+
   label {
     display: block;
     font-size: var(--textSmall);
