@@ -487,6 +487,10 @@ footer nav svg path {
   padding: 0;
 }
 
+.primary-btn svg {
+  margin: 0 auto;
+}
+
 .primary-btn::before {
   content: '';
   position: absolute;

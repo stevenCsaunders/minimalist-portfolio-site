@@ -215,6 +215,9 @@ footer nav svg path {
 	grid-template-columns: 25% auto;
 	align-items: center;
 	padding: 0;
+	svg {
+		margin: 0 auto;
+	}
 }
 
 .primary-btn::before {
@@ -227,7 +230,10 @@ footer nav svg path {
 	height: 100%;
 	background: var(--black);
 	opacity: 0.2;
+
 }
+
+
 
 .primary-btn:hover,
 .primary-btn:hover svg g {

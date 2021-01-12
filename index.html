@@ -1,16 +1,11 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 
 <head>
   <meta charset="utf-8">
   <title>Minimalist Portfolio Site</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
@@ -30,13 +25,13 @@
     <nav class="top-nav">
       <a href="/index.html" class="logo" aria-label="Site Header Logo">
         <svg role="img" aria-labelledby="header-logo" xmlns="http://www.w3.org/2000/svg" width="61" height="32">
-          <title id="header-lgoo">Header Logo</title>
+          <title id="header-logo">Header Logo</title>
           <path fill="#33323D" fill-rule="evenodd"
             d="M60.082 5.878L44.408 32 28.735 5.878h31.347zM15.673 0l15.674 26.122H0L15.673 0z" />
         </svg>
       </a>
       <button id='open'>
-        <svg role="img" aria-labelledby="menu-open" xmlns="http://www.w3.org/2000/svg" width="24" height="13" title="">
+        <svg role="img" aria-labelledby="menu-open" xmlns="http://www.w3.org/2000/svg" width="24" height="13">
           <title id="menu-open">Open Mobile Menu</title>
           <g fill="#33323D" fill-rule="evenodd">
             <path d="M0 0h24v1H0zM0 6h24v1H0zM0 12h24v1H0z" />
@@ -49,6 +44,7 @@
           <g fill="#33323D" fill-rule="evenodd">
             <path
               d="M17.132.661l.707.707L9.707 9.5l8.132 8.132-.707.707L9 10.207.868 18.34l-.707-.707L8.293 9.5.161 1.368.868.661 9 8.793 17.132.661z" />
+          </g>
         </svg>
       </button>
       <ul class="menu" id="top-nav">
@@ -60,20 +56,19 @@
   </header>
   <main>
     <div class="wrapper">
-    <section class="hero">
-      <picture>
-        <source media="(max-width: 767px)"
-          srcset="images/homepage/mobile/image-homepage-hero.jpg 1x, images/homepage/mobile/image-homepage-hero@2x.jpg 2x" />
-        <source media="(max-width: 1024px)"
-          srcset="images/homepage/tablet/image-homepage-hero.jpg 1x, images/homepage/tablet/image-homepage-hero@2x.jpg 2x" />
-        <img src="/images/homepage/desktop/image-homepage-hero.jpg" alt="homepage hero" />
-      </picture>
-      <div class="hero-header">
-        <h1>
-          Hey, I’m Alex Spencer and I love building beautiful websites
-        </h1>
-        <button class="primary-btn" onclick="location.href='/#about'" type="button">
-          <div class="primary-btn-img" aria-label="Primary Button Down Arrow Image">
+      <section class="hero">
+        <picture>
+          <source media="(max-width: 767px)"
+            srcset="images/homepage/mobile/image-homepage-hero.jpg 1x, images/homepage/mobile/image-homepage-hero@2x.jpg 2x" />
+          <source media="(max-width: 1024px)"
+            srcset="images/homepage/tablet/image-homepage-hero.jpg 1x, images/homepage/tablet/image-homepage-hero@2x.jpg 2x" />
+          <img src="/images/homepage/desktop/image-homepage-hero.jpg" alt="homepage hero" />
+        </picture>
+        <div class="hero-header">
+          <h1>
+            Hey, I’m Alex Spencer and I love building beautiful websites
+          </h1>
+          <button class="primary-btn" onclick="location.href='/#about'" type="button">
             <svg role="img" aria-labelledby="primary-button-img" xmlns="http://www.w3.org/2000/svg" width="16"
               height="14">
               <title id="primary-button-img">Primary Button Down Arrow Image</title>
@@ -83,15 +78,12 @@
                 <path opacity=".25" d="M0 1l8 4 8-4" />
               </g>
             </svg>
-          </div>
-          <div class="primary-btn-text">
-            <span>About Me</span>
-          </div>
-        </button>
-      </div>
-      <a id="about"></a>
-    </section>
-    <article>
+            <span class="primary-btn-text">About Me</span>
+          </button>
+        </div>
+        <a id="about"></a>
+      </section>
+
       <section class='about-section'>
         <picture class="about-img">
           <source media="(max-width: 767px)"
@@ -122,14 +114,13 @@
           </div>
         </div>
       </section>
-    </article>
-    <section class="work-together">
-      <h2>Interested in doing a project together?</h2>
-      <span class="horizontal-line"></span>
-      <button class="secondary-btn" onclick="location.href='/contact.html'" type="button">Contact Me</button>
-    </section>
-    </main>
-  </div>
+
+      <section class="work-together">
+        <h2>Interested in doing a project together?</h2>
+        <span class="horizontal-line"></span>
+        <button class="secondary-btn" onclick="location.href='/contact.html'" type="button">Contact Me</button>
+      </section>
+    </div>
   </main>
   <footer>
     <div class="wrapper">
@@ -178,7 +169,7 @@
     </div>
 
   </footer>
-  <script src="" async defer></script>
+
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
