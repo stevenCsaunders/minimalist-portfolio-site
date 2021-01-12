@@ -4,6 +4,8 @@
 	justify-content: space-between;
 	align-items: center;
 	overflow: hidden;
+	max-width: 1440px;
+	margin: 0 auto;
 	button {
 		border: none;
 		background: none;
@@ -52,6 +54,11 @@
 			}
 		}
 	}
+}
+
+.wrapper {
+	max-width: 1440px;
+	margin: 0 auto;
 }
 
 .hero {

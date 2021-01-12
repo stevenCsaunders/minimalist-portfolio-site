@@ -171,6 +171,9 @@ main button {
 footer {
   background: var(--darkBlue);
   color: var(--lightGrey);
+}
+
+footer .wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -178,26 +181,26 @@ footer {
   padding: 2em 0;
 }
 
-footer nav {
+footer .wrapper nav {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-footer nav ul {
+footer .wrapper nav ul {
   text-align: center;
 }
 
-footer nav ul li + li {
+footer .wrapper nav ul li + li {
   margin-top: 1em;
 }
 
-footer nav ul a {
+footer .wrapper nav ul a {
   color: var(--lightGrey);
 }
 
-footer nav svg {
+footer .wrapper nav svg {
   margin: 2em 0;
 }
 
@@ -227,21 +230,23 @@ nav ul {
     margin-bottom: .75em;
   }
   footer {
-    flex-direction: row;
     padding: 2em var(--containerPadding);
+  }
+  footer .wrapper {
+    flex-direction: row;
     justify-content: space-between;
   }
-  footer nav {
+  footer .wrapper nav {
     flex-direction: row;
   }
-  footer nav svg {
+  footer .wrapper nav svg {
     margin-right: 2em;
   }
-  footer nav ul {
+  footer .wrapper nav ul {
     display: flex;
     flex-direction: row;
   }
-  footer nav ul li + li {
+  footer .wrapper nav ul li + li {
     margin-left: 2em;
     margin-top: 0;
   }
@@ -253,6 +258,8 @@ nav ul {
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .top-nav button {
@@ -310,6 +317,11 @@ nav ul {
 .top-nav ul li a:hover::after {
   transform: translateY(-1.5em);
   opacity: 1;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .hero {
