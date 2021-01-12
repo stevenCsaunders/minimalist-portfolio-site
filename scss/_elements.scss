@@ -40,10 +40,13 @@ main {
   }
 
   p {
+    font-weight: 200;
     margin-bottom: 1.15rem;
     max-width: 50em;
+    color: var(--darkBlue);
+
     a {
-      color: var(--darkBlue);
+      color: var(--cyan);
       text-decoration: none;
       border-bottom: solid 2px var(--cyan);
     }
@@ -114,8 +117,7 @@ main {
     font-size: var(--textSmall);
     transition: background 0.3s ease;
     display: block;
-
-    
+    letter-spacing: 1px;    
   }
 }
 
