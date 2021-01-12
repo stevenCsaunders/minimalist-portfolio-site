@@ -70,11 +70,6 @@ main article {
   margin-bottom: 6.25em;
 }
 
-main h1 {
-  --h1: 2.5em;
-  font-size: var(--h1);
-}
-
 main ul {
   list-style-type: none;
 }
