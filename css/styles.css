@@ -122,6 +122,11 @@ main .text_small {
   font-size: var(--textSmall);
 }
 
+main a {
+  color: var(--darkBlue);
+  text-decoration: none;
+}
+
 main label {
   display: block;
   font-size: var(--textSmall);
