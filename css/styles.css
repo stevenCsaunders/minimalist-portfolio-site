@@ -683,6 +683,9 @@ footer nav svg path {
   .about-section .about-content p {
     padding-right: 3em;
   }
+  .hero-header {
+    width: 40%;
+  }
   .portfolio-item {
     gap: 4em;
   }
