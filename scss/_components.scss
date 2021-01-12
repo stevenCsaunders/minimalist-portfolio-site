@@ -433,7 +433,7 @@ footer nav svg path {
 	}
 
 	.hero-header {
-		width: 40%;
+		width: 50%;
 	}
 
 	.portfolio-item {
@@ -480,5 +480,11 @@ footer nav svg path {
 			padding: 0;
 			margin: 0;
 		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.hero-header {
+		width: 40%;
 	}
 }
