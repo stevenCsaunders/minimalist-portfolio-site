@@ -131,7 +131,7 @@ footer {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 2em 0;
+    padding: 0;
     nav {
       display: flex;
       flex-direction: column;
@@ -185,7 +185,7 @@ nav {
   }
 
   footer {
-    padding: 2em var(--containerPadding);
+    padding: 0 var(--containerPadding);
     .wrapper{
       flex-direction: row;
       justify-content: space-between;

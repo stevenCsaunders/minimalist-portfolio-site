@@ -175,7 +175,7 @@ footer .wrapper {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 2em 0;
+  padding: 0;
 }
 
 footer .wrapper nav {
@@ -227,7 +227,7 @@ nav ul {
     margin-bottom: .75em;
   }
   footer {
-    padding: 2em var(--containerPadding);
+    padding: 0 var(--containerPadding);
   }
   footer .wrapper {
     flex-direction: row;
@@ -603,7 +603,6 @@ footer nav svg path {
     width: 100%;
     margin-bottom: 0;
   }
-  .about-content-wrapper,
   .portfolio-content-wrapper {
     padding: 0;
   }
@@ -612,15 +611,17 @@ footer nav svg path {
     grid-template-columns: repeat(2, 1fr);
     gap: 4em;
   }
-  .about-section .about-img {
-    align-self: center;
-  }
   .about-section .about-img img {
     margin: 0;
     padding: 0;
+    min-height: 100%;
+    object-fit: cover;
   }
   .about-section .about-content-wrapper {
     padding: 2em 0;
+    width: 90%;
+    height: 100%;
+    justify-self: center;
   }
   .portfolio-item {
     display: grid;
@@ -684,7 +685,10 @@ footer nav svg path {
 
 @media (min-width: 1024px) {
   .about-section {
-    gap: 6em;
+    gap: 5em;
+  }
+  .about-section .about-content-wrapper {
+    width: 75%;
   }
   .about-section .about-content p {
     padding-right: 3em;
@@ -738,6 +742,9 @@ footer nav svg path {
 @media (min-width: 1200px) {
   .hero-header {
     width: 40%;
+  }
+  .about-section .about-content-wrapper {
+    width: 60%;
   }
 }
 
