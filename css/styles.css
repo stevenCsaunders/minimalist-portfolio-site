@@ -168,6 +168,7 @@ main button {
 footer {
   background: var(--darkBlue);
   color: var(--lightGrey);
+  margin-bottom: 4em;
 }
 
 footer .wrapper {
